@@ -22,5 +22,5 @@ ov1 = Oval()
 ov1.randomize(20)
 ov1.draw()
 
-tri1 = Triangle(5,5, 100,5, 100,200)
+tri1 = Triangle(5,10, 100,5, 100,200)
 tri1.draw()

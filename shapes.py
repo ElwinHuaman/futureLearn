@@ -2,6 +2,7 @@
 # This code will NOT work on trinket.io as the tkinter module is not supported
 # Raspberry Pi Foundation 2017
 # CC-BY-SA 4.0
+# Elwin using this Python code
 
 try:
     from tkinter import Tk, Canvas, BOTH

@@ -36,7 +36,7 @@ enemies_defeated = 0
         return self.weakness
     
     def set_enemies_defeated(self, new_enemies_defeated):
-        Enemy.enemies_defeated = new_enemies_defeated
+        Enemy.enemies_defeated += new_enemies_defeated
     def get_enemies_defeated(self):
         return Enemy.enemies_defeated
 

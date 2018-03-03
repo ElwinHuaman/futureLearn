@@ -1,7 +1,7 @@
 class Item():
-    def __init__(self, name, description):
+    def __init__(self, name):
         self.name = name
-        self.description = description
+        self.description = None
     
     def set_name(self, item_name):
         self.name = item_name

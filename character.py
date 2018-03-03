@@ -6,8 +6,8 @@ class Character():
         self.conversation = None
 
     def describe(self):
-        print(self.name + " is here! ")
-        print(self.description)
+        print("CAUTION!! "+ self.name+" is here!... "+self.description)
+        print("and my vulnerabilty is "+ self.get_weakness())
     
     def set_conversation(self, conversation):
         self.conversation = conversation
@@ -24,7 +24,7 @@ class Character():
 
 class Enemy(Character):
 
-enemies_defeated = 0
+    enemies_defeated = 0
 
     def __init__(self, char_name, char_description):
         super().__init__(char_name, char_description)

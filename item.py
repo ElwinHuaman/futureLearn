@@ -14,5 +14,5 @@ class Item():
         return self.description
     
     def get_details(self):
-        print("Name: "+self.name)
-        print("Description: "+ self.description)
+        print("ATENTION!!..there is an special ITEM to kill zombies|monsters and more")
+        print("Name of the Item: '"+self.name + "' Useful for "+ self.description)

@@ -28,8 +28,9 @@ tabitha.set_weakness("book")
 kitchen.set_character(tabitha)
 
 #SECOND friend
-grill = Friend("Grill", "A fat fish")
-grill.set_conversation("Como te ayudo")
+grill = Enemy("Grill", "A fat fish in the Amazonas")
+grill.set_conversation("gluglu...blooddd...glu")
+grill.set_weakness("water")
 ballroom.set_character(grill)
 
 #ITEMS created
@@ -41,16 +42,16 @@ book = Item("book")
 book.set_description("A really good book entitled 'Comentarios Reales'")
 dinning_hall.set_item(book)
 
+water = Item("water")
+water.set_description("A purify water from Peru")
+kitchen.set_item(water)
+
 #dining_hall.get_details()
 current_room = kitchen    
 backpack = []
 dead = False
 
 while dead == False:		
-
-    if inhabitant.enemies_defeated >= 5:
-        print("You are the Winner!!!!")
-        break
 
     print("\n")         
     current_room.get_details()
@@ -96,7 +97,7 @@ while dead == False:
             
     elif command == "take":
         if item is not None:
-            print("You put the " + item.get_name() + "in your backpack")
+            print("You put the: " + item.get_name() + " in your backpack")
             backpack.append(item.get_name())
             current_room.set_item(None)
         else:
@@ -106,6 +107,12 @@ while dead == False:
             print("I wouldn't do that if I were you...")
         else:
             inhabitant.hug()
+    elif command == "items":
+        if not backpack:
+            print("You don't have items in you backpack")
+        else:
+            print("You have these items now: ")
+            print(backpack)
     else:
         print("I don't know how to " + command)
 # sword = Item("Sword","Small and easy to use in a battle...")

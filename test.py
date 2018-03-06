@@ -74,7 +74,7 @@ while dead == False:
         if inhabitant is not None:
             inhabitant.talk()
     elif command == "fight":
-        if inhabitant == None or isinstance(inhabitant, Friend):
+        if inhabitant == None or isinstance(inhabitant, src.Friend):
             print("There is no one here to fight with")
         else:
             print("What will you gifht with?")

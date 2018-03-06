@@ -1,14 +1,15 @@
-from room import Room
-from item import Item
-from character import Character, Enemy, Friend
+import src
+#from room import Room
+#from item import Item
+#from character import Character, Enemy, Friend
 
-kitchen = Room("Kitchen")
+kitchen = src.Room("Kitchen")
 kitchen.set_description("A dark and dirty room buzzing with flies.")
 
-dinning_hall = Room("DInning Hall")
+dinning_hall = src.Room("DInning Hall")
 dinning_hall.set_description("A large room with ornate golden decorations on each wall.")
 
-ballroom = Room("Ballroom")
+ballroom = src.Room("Ballroom")
 ballroom.set_description("A vast room with a shiny wc")
 
 kitchen.link_room(dinning_hall, "south") 
@@ -17,32 +18,32 @@ dinning_hall.link_room(ballroom, "west")
 ballroom.link_room(dinning_hall, "east")
 
 # ONE enemy
-dave = Enemy("Dave", "A smelly zombie")
+dave = src.Enemy("Dave", "A smelly zombie")
 dave.set_conversation("Brrrrrsadl.. ertrtg...brains")
 dave.set_weakness("cheese")
 dinning_hall.set_character(dave)
 
-tabitha = Enemy("Tabitha", "An enormous spider with countless eyes")
+tabitha = src.Enemy("Tabitha", "An enormous spider with countless eyes")
 tabitha.set_conversation("Ssss... I'm so bored...Zzz")
 tabitha.set_weakness("book")
 kitchen.set_character(tabitha)
 
 #SECOND friend
-grill = Enemy("Grill", "A fat fish in the Amazonas")
+grill = src.Enemy("Grill", "A fat fish in the Amazonas")
 grill.set_conversation("gluglu...blooddd...glu")
 grill.set_weakness("water")
 ballroom.set_character(grill)
 
 #ITEMS created
-cheese = Item("cheese")
+cheese = src.Item("cheese")
 cheese.set_description("A large and smelly block of cheese")
 ballroom.set_item(cheese)
 
-book = Item("book")
+book = src.Item("book")
 book.set_description("A really good book entitled 'Comentarios Reales'")
 dinning_hall.set_item(book)
 
-water = Item("water")
+water = src.Item("water")
 water.set_description("A purify water from Peru")
 kitchen.set_item(water)
 
